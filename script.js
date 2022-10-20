@@ -13,7 +13,7 @@ function getComputerChoice() {
 function playerSelection() {
     let playerChoice = prompt("Choose between rock, paper, or scissors.");
     console.log("user: " + playerChoice);
-    return playerChoice;
+    return playerChoice.toLowerCase();
 }
 
 function mainGame(player, computer) {
