@@ -16,7 +16,7 @@ function playerSelection() {
     return playerChoice.toLowerCase();
 }
 
-function mainGame(player, computer) {
+function oneRound(player, computer) {
     if (player == "rock" && computer == "scissors"){
         console.log("You win! Rock beats Scissors");
     } else if (player == "scissors" && computer == "rock"){
@@ -38,4 +38,10 @@ function mainGame(player, computer) {
     }
 }
 
-mainGame(playerSelection(), getComputerChoice());
+function game(){
+    for(let i = 0; i < 5; i++){
+        oneRound(playerSelection(), getComputerChoice());
+    }
+}
+
+game();
